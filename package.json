@@ -1,0 +1,13 @@
+{
+  "name": "spike-oauth",
+  "version": "0.0.1",
+  "description": "Auth0 spike to authentification",
+  "keywords": ["oauth", "auth0", "spike"],
+  "license": "",
+  "author": "GuideSmiths",
+  "scripts": {},
+  "dependencies": {
+    "auth0-js": "^9.16.0",
+    "jwt-decode": "^3.1.2"
+  }
+}
