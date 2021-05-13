@@ -2,12 +2,26 @@
   "name": "spike-oauth",
   "version": "0.0.1",
   "description": "Auth0 spike to authentification",
-  "keywords": ["oauth", "auth0", "spike"],
+  "keywords": [
+    "oauth",
+    "auth0",
+    "spike"
+  ],
   "license": "",
   "author": "GuideSmiths",
-  "scripts": {},
+  "scripts": {
+    "start": "node bin/www",
+    "dev": "nodemon bin/www"
+  },
   "dependencies": {
     "auth0-js": "^9.16.0",
-    "jwt-decode": "^3.1.2"
+    "express": "^4.17.1",
+    "jsonwebtoken": "^8.5.1",
+    "jwks-rsa": "^2.0.3",
+    "jwt-decode": "^3.1.2",
+    "morgan": "^1.10.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.7"
   }
 }

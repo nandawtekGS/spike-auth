@@ -1,0 +1,28 @@
+<!doctype html>
+<html class="no-js" lang="">
+  <head>
+    <meta charset="utf-8">
+    <title>OAUTH Spike</title>
+    <meta name="description" content="Spike to explore how to use OAuth">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  </head>
+
+  <body>
+    <button onclick="login()">Login</button>
+    <a href="/secrets">Verify authentication 401</a>
+    <script src="https://cdn.auth0.com/js/auth0/9.16.0/auth0.min.js"></script>
+    <script>
+      auth0 = new auth0.WebAuth({
+        "domain": "ignacio-benitez.eu.auth0.com",
+        "clientID": "wTUZFb53ETcu1f6G820H0qSbPkYNtAB7",
+        "redirectUri": "http://localhost:3000/secrets",
+        "audience": "https://ignacio-benitez.eu.auth0.com/userinfo",
+        "responseType": "token id_token",
+        "scope": "openid profile",
+      })
+      const login = () => {
+        auth0.authorize()
+      }
+    </script>
+  </body>
+</html>
